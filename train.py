@@ -18,22 +18,14 @@ torch.backends.cudnn.benchmark=True
 
 
 parser = argparse.ArgumentParser(description='HSM-Net')
-parser.add_argument('--maxdisp', type=int ,default=384,
-                    help='maxium disparity')
-parser.add_argument('--logname', default='logname',
-                    help='log name')
-parser.add_argument('--database', default='/ssd//',
-                    help='data path')
-parser.add_argument('--epochs', type=int, default=10,
-                    help='number of epochs to train')
-parser.add_argument('--batchsize', type=int, default=28,
-                    help='samples per batch')
-parser.add_argument('--loadmodel', default=None,
-                    help='weights path')
-parser.add_argument('--savemodel', default='./',
-                    help='save path')
-parser.add_argument('--seed', type=int, default=1, metavar='S',
-                    help='random seed (default: 1)')
+parser.add_argument('--maxdisp', type=int ,default=384,help='maxium disparity')
+parser.add_argument('--logname', default='logname',help='log name')
+parser.add_argument('--database', default='/ssd//',help='data path')
+parser.add_argument('--epochs', type=int, default=10,help='number of epochs to train')
+parser.add_argument('--batchsize', type=int, default=28,help='samples per batch')
+parser.add_argument('--loadmodel', default=None,help='weights path')
+parser.add_argument('--savemodel', default='./',help='save path')
+parser.add_argument('--seed', type=int, default=1, metavar='S',help='random seed (default: 1)')
 args = parser.parse_args()
 torch.manual_seed(args.seed)
 
